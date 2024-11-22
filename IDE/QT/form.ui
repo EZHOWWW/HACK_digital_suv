@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>ADRudion</class>
+ <widget class="QMainWindow" name="ADRudion">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>450</height>
+    <width>1600</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#f4f2ed; 
+color:#181617;
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QToolButton" name="File">
@@ -22,6 +30,21 @@
       <width>100</width>
       <height>50</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#849bfb; \n
+color: #181617; \n
+
+</string>
     </property>
     <property name="text">
      <string>Файл</string>
@@ -36,6 +59,21 @@
       <height>50</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#fb9c84; \n
+color: #181617; \n
+
+</string>
+    </property>
     <property name="text">
      <string>Настрйки</string>
     </property>
@@ -45,9 +83,20 @@
      <rect>
       <x>0</x>
       <y>50</y>
-      <width>800</width>
-      <height>380</height>
+      <width>1600</width>
+      <height>760</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#f4f2ed; 
+color:#181617;
+</string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::North</enum>
@@ -67,8 +116,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>800</width>
-        <height>350</height>
+        <width>1600</width>
+        <height>700</height>
        </rect>
       </property>
       <property name="url">
@@ -90,8 +139,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>800</width>
-        <height>350</height>
+        <width>1600</width>
+        <height>700</height>
        </rect>
       </property>
       <property name="url">
@@ -102,13 +151,39 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QToolButton" name="Debug">
+    <property name="geometry">
+     <rect>
+      <x>1500</x>
+      <y>0</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Дебаг</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="Drive">
+    <property name="geometry">
+     <rect>
+      <x>1400</x>
+      <y>0</y>
+      <width>68</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Прошить</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1600</width>
      <height>22</height>
     </rect>
    </property>
