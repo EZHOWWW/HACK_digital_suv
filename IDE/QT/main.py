@@ -11,7 +11,7 @@ from PySide6.QtCore import QUrl, QObject, Slot
 from PySide6.QtWebChannel import QWebChannel
 from PySide6.QtWebEngineWidgets import QWebEngineView
 
-from IDE.QT.form import IDR_mainwindow_ui
+from form import IDR_mainwindow_ui
 
 
 # заглушка питон пошелнахуй
@@ -30,7 +30,6 @@ class ArdublocklyWebServer(BaseHTTPRequestHandler):
     def __init__(self, request, client_address, server):
         super().__init__(request, client_address, server)
 
-
     def _send_response(self, status, content_type, content):
         self.send_response(status)
         self.send_header("Content-Type", content_type)
@@ -42,34 +41,42 @@ class ArdublocklyWebServer(BaseHTTPRequestHandler):
             if self.path == "/" or self.path == "/index.html":
                 try:
                     with open(f"{self.basepath}/ardublockly/index.html", "r", encoding="utf-8") as f:
-                        # content = 
+                        # content =
                         self._send_response(200, "text/html", f.read())
                 except FileNotFoundError:
-                    self._send_response(404, "application/json", json.dumps({"error": "index.html not found"}))
+                    self._send_response(
+                        404, "application/json", json.dumps({"error": "index.html not found"}))
             elif self.path.endswith(".css"):
                 self._send_static_file("text/css")
             elif self.path.endswith(".js"):
                 self._send_static_file("application/javascript")
             elif self.path.endswith(".png") or self.path.endswith(".jpg"):
-                self._send_static_file("image/png" if self.path.endswith(".png") else "image/jpeg")
+                self._send_static_file(
+                    "image/png" if self.path.endswith(".png") else "image/jpeg")
         except Exception as e:
-            self._send_response(404, "application/json", json.dumps({"error" : "unknown path"}))
+            self._send_response(404, "application/json",
+                                json.dumps({"error": "unknown path"}))
         # else:
             # self._send_response(404, "application/json", json.dumps({"error": "Неизвестный путь"}))
 
     def do_POST(self):
         if self.path == "/save":
             try:
-                block_data = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+                block_data = json.loads(self.rfile.read(
+                    int(self.headers["Content-Length"])))
                 with open(os.path.join(SAVE_PATH, "blocks.json"), "w", encoding="utf-8") as f:
                     json.dump(block_data, f, indent=4)
-                self._send_response(200, "application/json", json.dumps({"success": True}))
+                self._send_response(200, "application/json",
+                                    json.dumps({"success": True}))
             except json.JSONDecodeError:
-                self._send_response(400, "application/json", json.dumps({"error": "Ошибка в формате данных JSON"}))
+                self._send_response(
+                    400, "application/json", json.dumps({"error": "Ошибка в формате данных JSON"}))
             except Exception as e:
-                self._send_response(500, "application/json", json.dumps({"error": str(e)}))
+                self._send_response(500, "application/json",
+                                    json.dumps({"error": str(e)}))
         else:
-            self._send_response(404, "application/json", json.dumps({"error": "Неизвестный путь"}))
+            self._send_response(404, "application/json",
+                                json.dumps({"error": "Неизвестный путь"}))
 
     def _send_static_file(self, content_type: str):
         try:
@@ -80,8 +87,8 @@ class ArdublocklyWebServer(BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(f.read())
         except FileNotFoundError:
-            self._send_response(404, "application/json", json.dumps({"error": "Файл не найден"}))
-
+            self._send_response(404, "application/json",
+                                json.dumps({"error": "Файл не найден"}))
 
 
 # QT
@@ -93,7 +100,6 @@ class VisuRadionIDE(QMainWindow):
         self.setupServer(self.WEBAPP_PORT)
 
         self._setupUi()
-
 
     def _setupUi(self):
         self.ui = IDR_mainwindow_ui()
@@ -120,7 +126,6 @@ class VisuRadionIDE(QMainWindow):
         server_thread.daemon = True
         server_thread.start()
         print(f"Сервер запущен на http://localhost:{port}")
-
 
     def saveBlocks(self):
         self.bloklyWebWidget.page().runJavaScript(
@@ -165,8 +170,9 @@ class VisuRadionIDE(QMainWindow):
             with open(os.path.join(SAVE_PATH, "blocks.json"), "r") as f:
                 blocks = json.load(f)
 
-            arduino_code = RadionControllerService.compile(blocks) 
-            is_load_success = RadionControllerService.load_to_controller(arduino_code)
+            arduino_code = RadionControllerService.compile(blocks)
+            is_load_success = RadionControllerService.load_to_controller(
+                arduino_code)
 
         except FileNotFoundError:
             print("Файл блоков не найден. Сначала сохраните блоки.")
@@ -185,6 +191,8 @@ class RadionControllerService:
 
     @staticmethod
     def load_to_controller(arduino_code: str) -> bool:
+        # run rudion programmer file_paht program_path
+        # (needs full path)
         print(f"Загрузка кода на контроллер:\n{arduino_code}")
         return True
 
