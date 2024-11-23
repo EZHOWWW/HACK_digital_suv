@@ -1,0 +1,4 @@
+IDE/QT/.qtcreator/*
+*__pycache__*
+*blockly*
+*saves*
