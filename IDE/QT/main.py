@@ -2,6 +2,7 @@
 import sys
 import os
 import json
+import subprocess
 
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -186,19 +187,22 @@ class RadionControllerService:
     @staticmethod
     def compile(file_path: str | os.PathLike) -> str:
         print(f"Компиляция файла: {file_path}")
-        arduino_code = "ABOBOA"
-        return arduino_code
+        subprocess.run(['../RudionManagment/Build.sh', file_path])
 
     @staticmethod
-    def load_to_controller(arduino_code: str) -> bool:
+    def load_to_controller(build_path: str | os.PathLike) -> bool:
         # run rudion programmer file_paht program_path
         # (needs full path)
-        print(f"Загрузка кода на контроллер:\n{arduino_code}")
+        print(f"Загрузка кода на контроллер:\n{build_path}")
+        subprocess.run(['sudo', '../RudionManagment/Upload.sh', build_path])
         return True
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     ide = VisuRadionIDE()
+    RadionControllerService.compile('../RudionManagment')
+    RadionControllerService.load_to_controller('../RudionManagment/build/')
+
     ide.show()
     sys.exit(app.exec())
