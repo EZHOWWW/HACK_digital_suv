@@ -340,7 +340,8 @@ Ardublockly.saveTextFileAs = function(fileName, content) {
 
 Ardublockly.codeToServer = function(fileName, content) {
   var blob = new Blob([content], {type: 'text/plain;charset=utf-8'});
-  save(blob, fileName);
+  // save(blob, fileName);
+  return blob, fileName
 };
 
 /**

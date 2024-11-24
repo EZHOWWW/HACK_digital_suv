@@ -199,9 +199,11 @@ Ardublockly.discardAllBlocks = function() {
 Ardublockly.upload = function() {
   var arduinoCode = Ardublockly.generateArduino();
 
-  Ardublockly.saveTextFileAs(
-      "hui" + '.cpp',
-      arduinoCode);
+  // Ardublockly.saveTextFileAs(
+  //     "BBBB" + '.cpp',
+  //     arduinoCode);
+
+  Ardublockly.codeToServer("BBBB.cpp", arduinoCode);
 };
 
 /** @return {!boolean} Indicates if the Blockly workspace has blocks. */

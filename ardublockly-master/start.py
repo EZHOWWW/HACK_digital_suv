@@ -24,21 +24,6 @@ SERVER_IP = 'localhost'
 SERVER_PORT = 5053
 
 
-def open_browser(ip, port, file_path=''):
-    """Start a browser in a separate thread after waiting for half a second.
-
-    :param ip: IP address or host name to build URL.
-    :param port: Server port to build the URL.
-    :param file_path: Path within domain for the browser to open.
-    :return: None.
-    """
-    def _open_browser():
-        webbrowser.get().open('http://%s:%s/%s' % (ip, port, file_path))
-
-    thread = threading.Timer(0.5, _open_browser)
-    thread.start()
-
-
 def find_ardublockly_dir(search_path):
     """Find the Ardublockly project directory absolute path.
 
@@ -172,13 +157,8 @@ def main():
     ardublocklyserver.compilersettings.ServerCompilerSettings(
         ardublockly_root_dir)
 
-    print('\n======= Starting Server =======')
-    if launch_browser:
-        open_browser(ip=SERVER_IP, port=SERVER_PORT)
-
     ardublocklyserver.server.launch_server(
             ip=SERVER_IP, port=SERVER_PORT, document_root_=server_root)
-
 
 if __name__ == '__main__':
     main()
