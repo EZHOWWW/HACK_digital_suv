@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# full save path
 # full path to Cmake + cpp folder
-project_dir=$1
+save_dir=$1
+project_dir=$2
+
 rudion_tools_path="$HOME"/.arduino15/packages/Rudiron/tools
+
+cp "$save_dir"/block.cpp "$project_dir"
 
 touch "$project_dir"/libraries.txt
 

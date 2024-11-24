@@ -186,7 +186,7 @@ class RadionControllerService:
     @staticmethod
     def compile(file_path: str | os.PathLike = 'RudionManagment') -> str:
         print(f"Компиляция файла: {file_path}")
-        subprocess.run(['RudionManagment/Build.sh', file_path])
+        subprocess.run([SAVE_PATH, 'RudionManagment/Build.sh', file_path])
         return True
 
     @staticmethod
