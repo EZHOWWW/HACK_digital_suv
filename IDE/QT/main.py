@@ -12,7 +12,7 @@ from PySide6.QtCore import QUrl, QObject, Slot
 from PySide6.QtWebChannel import QWebChannel
 from PySide6.QtWebEngineWidgets import QWebEngineView
 
-from form import IDR_mainwindow_ui
+from form import Ui_mainWindow
 
 
 # заглушка питон пошелнахуй
@@ -103,7 +103,7 @@ class VisuRadionIDE(QMainWindow):
         self._setupUi()
 
     def _setupUi(self):
-        self.ui = IDR_mainwindow_ui()
+        self.ui = Ui_mainWindow()
         self.ui.setupUi(self)
 
         self.ui.bloklyWebWidget = QWebEngineView(self)
@@ -116,8 +116,9 @@ class VisuRadionIDE(QMainWindow):
             "document.querySelectorAll('body > *:not(#divBody)').forEach(el => el.style.display = 'none');"
         )
 
-        self.ui.action_Save.triggered.connect(self.saveBlocks)
-        self.ui.action_Open.triggered.connect(self.loadBlocks)
+        self.ui.action_Save.triggered.connect(RadionControllerServicke.compile)
+        self.ui.action_Open.triggered.connect(
+            RadionControllerService.load_to_controller)
         self.ui.action_SaveAs.triggered.connect(self.saveAsBlocks)
         self.ui.action.triggered.connect(self.uploadToController)
 
@@ -171,9 +172,8 @@ class VisuRadionIDE(QMainWindow):
             with open(os.path.join(SAVE_PATH, "blocks.json"), "r") as f:
                 blocks = json.load(f)
 
-            arduino_code = RadionControllerService.compile(blocks)
-            is_load_success = RadionControllerService.load_to_controller(
-                arduino_code)
+            RadionControllerService.compile()
+            is_load_success = RadionControllerService.load_to_controller()
 
         except FileNotFoundError:
             print("Файл блоков не найден. Сначала сохраните блоки.")
@@ -181,28 +181,26 @@ class VisuRadionIDE(QMainWindow):
             print("Ошибка при загрузке на контроллер:", e)
 
 
-# TODO : тут нужно прописать логику для компиляции и загрузки на контроллер
 class RadionControllerService:
 
     @staticmethod
-    def compile(file_path: str | os.PathLike) -> str:
+    def compile(file_path: str | os.PathLike = 'RudionManagment') -> str:
         print(f"Компиляция файла: {file_path}")
-        subprocess.run(['../RudionManagment/Build.sh', file_path])
+        subprocess.run(['RudionManagment/Build.sh', file_path])
+        return True
 
     @staticmethod
-    def load_to_controller(build_path: str | os.PathLike) -> bool:
+    def load_to_controller(build_path: str | os.PathLike = 'RudionManagment/build') -> bool:
         # run rudion programmer file_paht program_path
         # (needs full path)
         print(f"Загрузка кода на контроллер:\n{build_path}")
-        subprocess.run(['sudo', '../RudionManagment/Upload.sh', build_path])
+        subprocess.run(['RudionManagment/Upload.sh', build_path])
         return True
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     ide = VisuRadionIDE()
-    RadionControllerService.compile('../RudionManagment')
-    RadionControllerService.load_to_controller('../RudionManagment/build/')
 
     ide.show()
     sys.exit(app.exec())

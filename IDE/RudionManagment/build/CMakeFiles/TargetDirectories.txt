@@ -1,0 +1,3 @@
+/home/dima/Main/Education/other/hack_dig_suv/HACK_digital_suv/IDE/RudionManagment/build/CMakeFiles/Sketch.elf.dir
+/home/dima/Main/Education/other/hack_dig_suv/HACK_digital_suv/IDE/RudionManagment/build/CMakeFiles/edit_cache.dir
+/home/dima/Main/Education/other/hack_dig_suv/HACK_digital_suv/IDE/RudionManagment/build/CMakeFiles/rebuild_cache.dir

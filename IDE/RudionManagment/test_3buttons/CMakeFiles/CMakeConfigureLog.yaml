@@ -1,0 +1,576 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:206 (message)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      The target system is: Generic -  - ARM
+      The host system is: Linux - 6.11.6-2-cachyos - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1104 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-HJ0ATS"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-HJ0ATS"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-HJ0ATS'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_344f3/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Check for working C compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-8V80TY"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-8V80TY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-8V80TY'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_4f0b6/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1104 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-NsZPHM"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-NsZPHM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-NsZPHM'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_d659a/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Check for working C compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-tw3rud"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-tw3rud"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-tw3rud'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_3afa5/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1104 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-2RSl93"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-2RSl93"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-2RSl93'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_376bf/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Check for working C compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-SEtN6M"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-SEtN6M"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-SEtN6M'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_8437b/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/3.27.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1104 (message)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-FcrDL6"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-FcrDL6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-FcrDL6'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_7789c/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Check for working C compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-uN3Wze"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-uN3Wze"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-uN3Wze'
+        
+        Run Build Command(s): /home/dima/Main/Education/other/hack_dig_suv/rudion/cmake-3.27.6-linux-x86_64/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_cb7be/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      The target system is: Generic -  - ARM
+      The host system is: Linux - 6.11.6-2-cachyos - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/3.31.0/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1237 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:135 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:78 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-kBhI1Z"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-kBhI1Z"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-kBhI1Z'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_1d165/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:78 (enable_language)"
+    checks:
+      - "Check for working C compiler: /home/dima/.arduino15/packages/Rudiron/tools/gcc-arm-none-eabi/default/bin/arm-none-eabi-gcc"
+    directories:
+      source: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-JrUPZA"
+      binary: "/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-JrUPZA"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "--specs=nosys.specs"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dima/Main/Education/other/hack_dig_suv/rudion/base1/VisualStudioCode/test_3buttons/CMakeFiles/CMakeScratch/TryCompile-JrUPZA'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /home/dima/.arduino15/packages/Rudiron/tools/ninja/default/ninja -f Makefile cmTC_ef1fa/fast
+        ninja: error: Makefile:5: expected '=', got ':'
+        default_target: all
+                      ^ near here
+        
+      exitCode: 1
+...
