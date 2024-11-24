@@ -20,7 +20,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -41,7 +41,8 @@
     <property name="title">
      <string>Контроллер</string>
     </property>
-    <addaction name="action"/>
+    <addaction name="action_Build"/>
+    <addaction name="action_Upload"/>
    </widget>
    <widget class="QMenu" name="menu">
     <property name="title">
@@ -75,14 +76,19 @@
     <string>Сохранить как</string>
    </property>
   </action>
-  <action name="action">
+  <action name="action_Build">
    <property name="text">
-    <string>Прошить</string>
+    <string>Собрать</string>
    </property>
   </action>
   <action name="action_2">
    <property name="text">
     <string>Спросить у ИИ</string>
+   </property>
+  </action>
+  <action name="action_Upload">
+   <property name="text">
+    <string>Прошить</string>
    </property>
   </action>
  </widget>
